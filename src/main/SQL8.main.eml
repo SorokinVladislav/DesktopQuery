@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$/../../src/main"/>
+	<levels>
+		<level name="Gradle: com.microsoft.sqlserver:mssql-jdbc:8.4.0.jre8" value="project"/>
+		<level name="Gradle: com.github.pengrad:java-telegram-bot-api:4.9.0" value="project"/>
+		<level name="Gradle: com.google.code.gson:gson:2.8.6" value="project"/>
+		<level name="Gradle: com.squareup.okhttp3:logging-interceptor:3.12.10" value="project"/>
+		<level name="Gradle: com.squareup.okhttp3:okhttp:3.12.10" value="project"/>
+		<level name="Gradle: com.squareup.okio:okio:1.15.0" value="project"/>
+	</levels>
+</component>

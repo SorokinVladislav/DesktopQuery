@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="819.0" prefWidth="1429.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+        <PasswordField fx:id="passField" layoutX="725.0" layoutY="772.0" prefHeight="25.0" prefWidth="118.0" promptText="Enter password" />
+        <AnchorPane layoutY="37.0" prefHeight="693.0" prefWidth="1429.0" style="-fx-background-color: #fafafa;">
+            <children>
+                <TextField fx:id="jobN" layoutX="66.0" layoutY="384.0" prefHeight="25.0" prefWidth="184.0" promptText="Enter JobName" />
+                <Button fx:id="authSignInButton" layoutX="602.0" layoutY="377.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="Execute" />
+                <TableView fx:id="table" editable="true" layoutX="12.0" layoutY="425.0" prefHeight="63.0" prefWidth="1016.0">
+                    <columns>
+                        <TableColumn fx:id="jID" prefWidth="38.0" text="JobID" />
+                        <TableColumn fx:id="jobName" editable="true" prefWidth="214.0" text="JobName" />
+                        <TableColumn fx:id="jobStatus" prefWidth="302.0" text="JobStatus" />
+                        <TableColumn fx:id="dataTransferStage" minWidth="0.0" prefWidth="459.0" text="DataTransferStage" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="table3" editable="true" layoutX="10.0" prefHeight="362.0" prefWidth="1412.0">
+                    <columns>
+                        <TableColumn fx:id="jobid3" prefWidth="54.0" text="JobID" />
+                        <TableColumn fx:id="jobName3" editable="true" prefWidth="182.0" text="JobName" />
+                        <TableColumn fx:id="closedTime" prefWidth="164.0" text="Updated time" />
+                        <TableColumn fx:id="receipt2" prefWidth="489.0" text="Receipt" />
+                        <TableColumn prefWidth="193.0" text="XML Type" fx:id="xml2" />
+                        <TableColumn fx:id="docIDcol" prefWidth="206.0" text="Doc_ID" />
+                        <TableColumn fx:id="ssccORsgtin" prefWidth="128.0" text="SSCC/SGTIN" />
+                    </columns>
+                </TableView>
+                <DatePicker fx:id="datePicker" layoutX="978.0" layoutY="384.0" prefHeight="25.0" prefWidth="133.0" />
+                <CheckBox fx:id="checkBox" layoutX="845.0" layoutY="388.0" mnemonicParsing="false" text="Date sort" />
+                <CheckBox fx:id="checkBox2" layoutX="729.0" layoutY="388.0" mnemonicParsing="false" text="With a mistakes" />
+                <TextField fx:id="jobID4" layoutX="274.0" layoutY="384.0" prefHeight="25.0" prefWidth="128.0" promptText="Enter JobID" />
+                <TableView fx:id="table2" editable="true" layoutX="12.0" layoutY="488.0" prefHeight="199.0" prefWidth="1412.0">
+                    <columns>
+                        <TableColumn fx:id="jobID2" prefWidth="39.0" text="JobID" />
+                        <TableColumn fx:id="status" minWidth="0.0" prefWidth="207.0" text="Status" />
+                        <TableColumn fx:id="receipt" prefWidth="458.0" text="Receipt" />
+                        <TableColumn prefWidth="296.0" text="XMLType" fx:id="xmlType" />
+                        <TableColumn fx:id="upTimeCol" prefWidth="147.0" text="Updated Time" />
+                        <TableColumn fx:id="docIDcol2" prefWidth="129.0" text="Doc_ID" />
+                        <TableColumn fx:id="ssccsgtinCol2" prefWidth="135.0" text="SSCC/SGTIN" />
+                    </columns>
+                </TableView>
+                <Button fx:id="copyDocIDBut" layoutX="1186.0" layoutY="377.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="91.0" text="Copy Doc_ID" />
+                <TextField fx:id="batchNoField" layoutX="425.0" layoutY="384.0" prefHeight="25.0" prefWidth="156.0" promptText="Enter BatchNo" />
+                <Button fx:id="copySsccSgtin" layoutX="1311.0" layoutY="377.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="91.0" text="SSCC/SGTIN" />
+                <TextField fx:id="codeCount" layoutX="1303.0" layoutY="444.0" prefHeight="25.0" prefWidth="107.0" promptText="TraceWay token" />
+                <Button fx:id="codeCountButton" layoutX="1186.0" layoutY="437.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="91.0" text="Code count" />
+                <Button fx:id="getReportButton" layoutX="1058.0" layoutY="457.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="91.0" text="Map report" />
+                <Button fx:id="getDetailedJob" layoutX="1058.0" layoutY="425.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Detailed job" />
+            <Button fx:id="copyNameButton" layoutX="12.0" layoutY="384.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" text="Copy" />
+            <AnchorPane fx:id="anchorPaneReport" layoutX="402.0" layoutY="357.0" prefHeight="200.0" prefWidth="597.0" style="-fx-background-color: #000000;" visible="false">
+               <children>
+                  <ProgressBar layoutX="120.0" layoutY="119.0" prefHeight="25.0" prefWidth="357.0" style="-fx-background-color: #d4ff00;">
+                     <effect>
+                        <ColorAdjust />
+                     </effect>
+                  </ProgressBar>
+                  <Text fill="#d4ff00" layoutX="179.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generating report...">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor>
+            </AnchorPane>
+            </children>
+        </AnchorPane>
+        <Label layoutX="603.0" layoutY="-1.0" style="-fx-font-weight: bold;" text="SQL Query" textFill="#d4ff00">
+            <font>
+                <Font name="Arial" size="26.0" />
+            </font>
+        </Label>
+        <TextField fx:id="jobN2" layoutX="14.0" layoutY="772.0" prefHeight="25.0" prefWidth="156.0" promptText="Enter  JobID" />
+        <Label layoutX="387.0" layoutY="737.0" style="-fx-font-weight: bold;" text="Resend reports " textFill="#d4ff00">
+            <font>
+                <Font name="Arial" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="authSignInButton2" layoutX="192.0" layoutY="765.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="Resend report" />
+        <CheckBox fx:id="checkBox4" layoutX="639.0" layoutY="776.0" mnemonicParsing="false" text="Confirm" textFill="WHITE" />
+        <ComboBox fx:id="boxCombo" layoutX="325.0" layoutY="772.0" prefWidth="150.0" promptText="Select report" />
+        <Button fx:id="authSignInButton3" layoutX="504.0" layoutY="765.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="Status=7" />
+        <Button fx:id="jobStatusButton" layoutX="1169.0" layoutY="765.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="UIDGenerated" />
+        <Label layoutX="1133.0" layoutY="737.0" style="-fx-font-weight: bold;" text="Work with job status" textFill="#d4ff00">
+            <font>
+                <Font name="Arial" size="18.0" />
+            </font>
+        </Label>
+      <Button fx:id="resend9151Button" layoutX="867.0" layoutY="765.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="Resend 9151" />
+      <Button fx:id="jobStatusButton12" layoutX="1286.0" layoutY="765.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="Suspend" />
+      <Button fx:id="jobStatusButton16" layoutX="1053.0" layoutY="765.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="Reject" />
+    </children>
+</AnchorPane>
